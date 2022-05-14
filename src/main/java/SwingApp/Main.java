@@ -1,5 +1,6 @@
 package SwingApp;
 
+import java.awt.Color;
 import javax.swing.*;
 
 public class Main {
@@ -122,6 +123,9 @@ public class Main {
         Semestre6.add(S6_Materia6);
         
         //herramientas
+        JSeparator separator = new JSeparator();
+        menu.add(separator); 
+        separator.setForeground(Color.white);
         Herramientas = new JMenu("Herramientas");
         salir = new JMenu("Salir");
         si = new JMenuItem("Si");
@@ -130,6 +134,9 @@ public class Main {
         Herramientas.add(salir);
         salir.add(si);
         salir.add(no);
+        
+        Salir s = new Salir(si);
+        si.addActionListener(s);
         
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainFrame.setVisible(true);
