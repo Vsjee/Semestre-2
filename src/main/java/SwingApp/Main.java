@@ -2,6 +2,8 @@ package SwingApp;
 
 import java.awt.Color;
 import javax.swing.*;
+import java.awt.Image;
+import java.awt.Toolkit;
 
 public class Main {
     
@@ -21,6 +23,9 @@ public class Main {
         
         mainFrame = new JFrame("Universitaria Uniagustiniana");
         mainFrame.setSize(600, 300);
+        
+        Image icon = Toolkit.getDefaultToolkit().getImage("src/main/java/SwingApp/logo-Uniagustiniana-comoes.png");    
+        mainFrame.setIconImage(icon);
         
         menu = new JMenuBar();
         mainFrame.add(menu, "North");
