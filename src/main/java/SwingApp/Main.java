@@ -8,8 +8,6 @@ import javax.swing.JMenuItem;
 import java.awt.Color;
 import java.awt.Image;
 import java.awt.Toolkit;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JSeparator;
@@ -158,12 +156,55 @@ public class Main {
 
         Salir s = new Salir(si);
         si.addActionListener(s);
-
-        NavegandoMenu a = new NavegandoMenu(S1_Materia1);
+        
+        //Navegacion
+        NavegandoMenu a = new NavegandoMenu(S2_Materia1);
         S1_Materia1.addActionListener(a);
+        S1_Materia2.addActionListener(a);
+        S1_Materia3.addActionListener(a);
+        S1_Materia4.addActionListener(a);
+        S1_Materia5.addActionListener(a);
+        S1_Materia6.addActionListener(a);
+        //
+        S2_Materia1.addActionListener(a);
+        S2_Materia2.addActionListener(a);
+        S2_Materia3.addActionListener(a);
+        S2_Materia4.addActionListener(a);
+        S2_Materia5.addActionListener(a);
+        S2_Materia6.addActionListener(a);
+        //
+        S3_Materia1.addActionListener(a);
+        S3_Materia2.addActionListener(a);
+        S3_Materia3.addActionListener(a);
+        S3_Materia4.addActionListener(a);
+        S3_Materia5.addActionListener(a);
+        S3_Materia6.addActionListener(a);
+        //
+        S4_Materia1.addActionListener(a);
+        S4_Materia2.addActionListener(a);
+        S4_Materia3.addActionListener(a);
+        S4_Materia4.addActionListener(a);
+        S4_Materia5.addActionListener(a);
+        S4_Materia6.addActionListener(a);
+        //
+        S5_Materia1.addActionListener(a);
+        S5_Materia2.addActionListener(a);
+        S5_Materia3.addActionListener(a);
+        S5_Materia4.addActionListener(a);
+        S5_Materia5.addActionListener(a);
+        S5_Materia6.addActionListener(a);
+        //
+        S6_Materia1.addActionListener(a);
+        S6_Materia2.addActionListener(a);
+        S6_Materia3.addActionListener(a);
+        S6_Materia4.addActionListener(a);
+        S6_Materia5.addActionListener(a);
+        S6_Materia6.addActionListener(a);
         
         //frame
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        mainFrame.setLocationRelativeTo(null);
+        mainFrame.setResizable(false);
         mainFrame.setVisible(true);
     }
 
