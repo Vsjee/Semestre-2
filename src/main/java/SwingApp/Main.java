@@ -157,7 +157,7 @@ public class Main {
         si.addActionListener(s);
         
         //Navegacion
-        NavegandoMenu a = new NavegandoMenu(S2_Materia1);
+        NavegandoMenu a = new NavegandoMenu(S1_Materia1);
         S1_Materia1.addActionListener(a);
         S1_Materia2.addActionListener(a);
         S1_Materia3.addActionListener(a);

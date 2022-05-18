@@ -12,7 +12,13 @@ public class MainInfoFrame {
     JTextField salonTexto, docenteTexto, estudianteTexto, nota1Texto, nota2Texto, nota3Texto, definitivaTexto;
     JButton calcular, validar, cerrar;
     
+    String saloncito, docentico;
+    
     MainInfoFrame(String s) {
+        salonesDocentes data = new salonesDocentes(s);
+        saloncito = data.salon();
+        docentico = data.docente();
+        
         mainFrame = new JFrame(s);
         mainFrame.setSize(598, 414);
 
@@ -63,13 +69,13 @@ public class MainInfoFrame {
         definitiva.setForeground(Color.red);
         
         //textFields info
-        salonTexto = new JTextField();
-        docenteTexto = new JTextField();
-        estudianteTexto = new JTextField("David Felipe Hernandez Gutierrez");
-        nota1Texto = new JTextField();
-        nota2Texto = new JTextField();
-        nota3Texto = new JTextField();
-        definitivaTexto = new JTextField();
+        salonTexto = new JTextField(saloncito);
+        docenteTexto = new JTextField(docentico);
+        estudianteTexto = new JTextField("DAVID FELIPE HERNANDEZ");
+        nota1Texto = new JTextField("");
+        nota2Texto = new JTextField("");
+        nota3Texto = new JTextField("");
+        definitivaTexto = new JTextField("");
         
         background.add(salonTexto);
         salonTexto.setBounds(110, 25, 50, 20);
@@ -94,7 +100,7 @@ public class MainInfoFrame {
         
         background.add(definitivaTexto);
         definitivaTexto.setBounds(110, 225, 30, 20);
-        definitivaTexto.setEditable(false);
+        //definitivaTexto.setEditable(false);
         
         //botones
         calcular = new JButton("CALCULAR");
@@ -117,6 +123,10 @@ public class MainInfoFrame {
         cerrar.setForeground(Color.red);
         
         //logica
+        
+        //calcular button
+        CalcularBtn calculo = new CalcularBtn(nota1Texto, nota2Texto, nota3Texto, definitivaTexto);
+        calcular.addActionListener(calculo);
         
         //close button
         cerrar.addActionListener(e -> {
