@@ -7,28 +7,28 @@ import java.awt.Color;
 
 public class MainInfoFrame {
     
-    JFrame mainFrame;
+    JFrame mainInfoFrame;
     JLabel salon, docente, estudiante, nota1, nota2, nota3, definitiva;
     JTextField salonTexto, docenteTexto, estudianteTexto, nota1Texto, nota2Texto, nota3Texto, definitivaTexto;
     JButton calcular, validar, cerrar;
     
     String saloncito, docentico;
     
-    MainInfoFrame(String s) {
-        salonesDocentes data = new salonesDocentes(s);
+    MainInfoFrame(String titulo) {
+        salonesDocentes data = new salonesDocentes(titulo);
         saloncito = data.salon();
         docentico = data.docente();
         
-        mainFrame = new JFrame(s);
-        mainFrame.setSize(598, 414);
+        mainInfoFrame = new JFrame(titulo);
+        mainInfoFrame.setSize(598, 414);
 
         //logo
         Image icon = Toolkit.getDefaultToolkit().getImage("src/main/java/SwingApp/logo-Uniagustiniana-comoes.png");
-        mainFrame.setIconImage(icon);
+        mainInfoFrame.setIconImage(icon);
 
         //background
         JLabel background = new JLabel(new ImageIcon("src/main/java/SwingApp/fondo.jpg"));
-        mainFrame.add(background);
+        mainInfoFrame.add(background);
         background.setBounds(0, 0, 598, 414);
         
         //contenido titulos
@@ -100,7 +100,7 @@ public class MainInfoFrame {
         
         background.add(definitivaTexto);
         definitivaTexto.setBounds(110, 225, 30, 20);
-        //definitivaTexto.setEditable(false);
+        definitivaTexto.setEditable(false);
         
         //botones
         calcular = new JButton("CALCULAR");
@@ -128,16 +128,20 @@ public class MainInfoFrame {
         CalcularBtn calculo = new CalcularBtn(nota1Texto, nota2Texto, nota3Texto, definitivaTexto);
         calcular.addActionListener(calculo);
         
+        //validar button
+        ValidarBtn valiBtn = new ValidarBtn(validar, titulo);
+        validar.addActionListener(valiBtn);
+        
         //close button
         cerrar.addActionListener(e -> {
-            mainFrame.dispose();
+            mainInfoFrame.dispose();
         });
         
         //frame
-        mainFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        mainFrame.setLocationRelativeTo(null);
-        mainFrame.setResizable(false);
-        mainFrame.setLayout(null);
-        mainFrame.setVisible(true);
+        mainInfoFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        mainInfoFrame.setLocationRelativeTo(null);
+        mainInfoFrame.setResizable(false);
+        mainInfoFrame.setLayout(null);
+        mainInfoFrame.setVisible(true);
     }
 }

@@ -28,13 +28,11 @@ public class CalcularBtn implements ActionListener {
         notaDos = Integer.parseInt(valor2);
         notaTres = Integer.parseInt(valor3);
         
-        notaUno *= 0.30;
-        notaDos *= 0.30;
-        notaTres *= 0.40;
-        
-        total = notaUno + notaDos + notaTres;
-        
-        totalSTR = Integer.toString(total);
+        if(notaUno >= 0 && notaDos >= 0 && notaTres >= 0) {
+            
+            total = (notaUno + notaDos + notaTres)/3;
+            totalSTR = Integer.toString(total);   
+        }
         
         return totalSTR;
     }

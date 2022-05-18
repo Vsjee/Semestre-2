@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 public class NavegandoMenu implements ActionListener {
 
     JMenuItem S1_Materia1;
-    String s;
+    String titulo;
 
     NavegandoMenu(JMenuItem S2_Materia1) {
         this.S1_Materia1 = S1_Materia1;
@@ -15,7 +15,7 @@ public class NavegandoMenu implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         JMenuItem menuItem = (JMenuItem)e.getSource();
-        s = menuItem.getText();
-        new MainInfoFrame(s);
+        titulo = menuItem.getText();
+        new MainInfoFrame(titulo);
     }
 }
