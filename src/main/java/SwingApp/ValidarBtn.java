@@ -3,19 +3,23 @@ package SwingApp;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JTextField;
 
 public class ValidarBtn implements ActionListener {
 
     JButton validar;
-    String titulo;
+    JTextField definitivaTexto;
+    String titulo, notaFinal;
 
-    ValidarBtn(JButton validar, String titulo) {
+    ValidarBtn(JButton validar, String titulo, JTextField definitivaTexto) {
 
         this.validar = validar;
         this.titulo = titulo;
+        this.definitivaTexto = definitivaTexto;
     }
 
     public void actionPerformed(ActionEvent e) {
-        new ValidarFrame(titulo);
+        notaFinal = definitivaTexto.getText();
+        new ValidarFrame(titulo, notaFinal);
     }
 }

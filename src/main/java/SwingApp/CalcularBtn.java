@@ -28,7 +28,7 @@ public class CalcularBtn implements ActionListener {
         notaDos = Integer.parseInt(valor2);
         notaTres = Integer.parseInt(valor3);
         
-        if(notaUno >= 0 && notaDos >= 0 && notaTres >= 0) {
+        if(notaUno >= 0 && notaUno <= 50 && notaDos >= 0 && notaDos <= 50 && notaTres >= 0 && notaTres <= 50) {
             
             total = (notaUno + notaDos + notaTres)/3;
             totalSTR = Integer.toString(total);   

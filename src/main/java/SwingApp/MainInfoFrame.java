@@ -72,10 +72,10 @@ public class MainInfoFrame {
         salonTexto = new JTextField(saloncito);
         docenteTexto = new JTextField(docentico);
         estudianteTexto = new JTextField("DAVID FELIPE HERNANDEZ");
-        nota1Texto = new JTextField("");
-        nota2Texto = new JTextField("");
-        nota3Texto = new JTextField("");
-        definitivaTexto = new JTextField("");
+        nota1Texto = new JTextField();
+        nota2Texto = new JTextField();
+        nota3Texto = new JTextField();
+        definitivaTexto = new JTextField();
         
         background.add(salonTexto);
         salonTexto.setBounds(110, 25, 50, 20);
@@ -129,7 +129,7 @@ public class MainInfoFrame {
         calcular.addActionListener(calculo);
         
         //validar button
-        ValidarBtn valiBtn = new ValidarBtn(validar, titulo);
+        ValidarBtn valiBtn = new ValidarBtn(validar, titulo, definitivaTexto);
         validar.addActionListener(valiBtn);
         
         //close button

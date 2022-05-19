@@ -153,8 +153,10 @@ public class Main {
         salir.add(si);
         salir.add(no);
 
-        Salir s = new Salir(si);
-        si.addActionListener(s);
+        //salir
+        si.addActionListener(e -> {
+            mainFrame.dispose();
+        });
         
         //Navegacion
         NavegandoMenu a = new NavegandoMenu(S1_Materia1);
