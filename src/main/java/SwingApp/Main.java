@@ -1,5 +1,6 @@
 package SwingApp;
 
+import java.awt.BorderLayout;
 import javax.swing.JFrame;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
@@ -8,8 +9,11 @@ import java.awt.Color;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JSeparator;
+import javax.swing.JTextArea;
+import javax.swing.JToolBar;
 import javax.swing.SwingUtilities;
 
 public class Main {
@@ -29,7 +33,7 @@ public class Main {
     Main() {
 
         mainFrame = new JFrame("Universitaria Uniagustiniana");
-        mainFrame.setSize(598, 414);
+        mainFrame.setSize(613, 414);
 
         //logo
         Image icon = Toolkit.getDefaultToolkit().getImage("src/main/java/SwingApp/logo-Uniagustiniana-comoes.png");
@@ -42,7 +46,11 @@ public class Main {
         //menu bar
         menu = new JMenuBar();
         mainFrame.add(menu, "North");
-
+        
+        JSeparator separator = new JSeparator();
+        menu.add(separator);
+        separator.setForeground(Color.white);
+        
         Semestre1 = new JMenu("Semestre 1");
         Semestre2 = new JMenu("Semestre 2");
         Semestre3 = new JMenu("Semestre 3");
@@ -141,9 +149,9 @@ public class Main {
         Semestre6.add(S6_Materia6);
 
         //herramientas
-        JSeparator separator = new JSeparator();
-        menu.add(separator);
-        separator.setForeground(Color.white);
+        //JSeparator separator = new JSeparator();
+        //menu.add(separator);
+        //separator.setForeground(Color.white);
         Herramientas = new JMenu("Herramientas");
         salir = new JMenu("Salir");
         si = new JMenuItem("Si");
@@ -157,9 +165,33 @@ public class Main {
         si.addActionListener(e -> {
             mainFrame.dispose();
         });
+
+        //JToolBar----------------------
+        JButton semestreUno, semestreDos, semestreTres, semestreCuatro, semestreCinco, semestreSeis;
+        
+        JToolBar toolBar = new JToolBar();
+        JToolBar barraBotones = new JToolBar();
+        
+        semestreUno = new JButton("1");
+        semestreDos = new JButton("2");
+        semestreTres = new JButton("3");
+        semestreCuatro = new JButton("4");
+        semestreCinco = new JButton("5");
+        semestreSeis = new JButton("6");
+        
+        barraBotones.add(semestreUno);
+        barraBotones.add(semestreDos);
+        barraBotones.add(semestreTres);
+        barraBotones.add(semestreCuatro);
+        barraBotones.add(semestreCinco);
+        barraBotones.add(semestreSeis);
+        
+        //toolBar.setLayout(null);
+        background.add(barraBotones, "North");
+        barraBotones.setBounds(0, 0, 598, 30);
         
         //Navegacion
-        NavegandoMenu a = new NavegandoMenu(S1_Materia1);
+        NavegandoMenu a = new NavegandoMenu(S1_Materia1, semestreUno, semestreDos, semestreTres, semestreCuatro, semestreCinco, semestreSeis);
         S1_Materia1.addActionListener(a);
         S1_Materia2.addActionListener(a);
         S1_Materia3.addActionListener(a);
@@ -201,13 +233,15 @@ public class Main {
         S6_Materia4.addActionListener(a);
         S6_Materia5.addActionListener(a);
         S6_Materia6.addActionListener(a);
-        
+
         //frame
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainFrame.setLocationRelativeTo(null);
         mainFrame.setResizable(false);
         mainFrame.setVisible(true);
     }
+    
+    //JToolBar----------------------
 
     public static void main(String[] args) {
 

@@ -19,7 +19,7 @@ public class ValidarFrame {
     ValidarFrame(String titulo, String notaFinal) {
         
         mainValidarFrame = new JFrame(titulo);
-        mainValidarFrame.setSize(598, 414);
+        mainValidarFrame.setSize(613, 414);
 
         //logo
         Image icon = Toolkit.getDefaultToolkit().getImage("src/main/java/SwingApp/logo-Uniagustiniana-comoes.png");

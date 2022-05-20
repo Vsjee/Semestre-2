@@ -20,7 +20,7 @@ public class MainInfoFrame {
         docentico = data.docente();
         
         mainInfoFrame = new JFrame(titulo);
-        mainInfoFrame.setSize(598, 414);
+        mainInfoFrame.setSize(613, 414);
 
         //logo
         Image icon = Toolkit.getDefaultToolkit().getImage("src/main/java/SwingApp/logo-Uniagustiniana-comoes.png");
