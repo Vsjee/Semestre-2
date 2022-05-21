@@ -1,4 +1,4 @@
-package SwingApp;
+package SwingApp.frame2;
 
 public class salonesDocentes {
 

@@ -1,4 +1,4 @@
-package SwingApp;
+package SwingApp.frame3;
 
 import java.awt.Color;
 import java.awt.Image;
@@ -16,17 +16,17 @@ public class ValidarFrame {
     JTextField estudianteText, definitivaTexto, procesoTexto, obsevacionesTexto;
     JButton registro, permanecia, cerrar;
     
-    ValidarFrame(String titulo, String notaFinal) {
+    public ValidarFrame(String titulo, String notaFinal) {
         
         mainValidarFrame = new JFrame(titulo);
         mainValidarFrame.setSize(613, 414);
 
         //logo
-        Image icon = Toolkit.getDefaultToolkit().getImage("src/main/java/SwingApp/logo-Uniagustiniana-comoes.png");
+        Image icon = Toolkit.getDefaultToolkit().getImage("src/main/java/SwingApp/img/logo-Uniagustiniana-comoes.png");
         mainValidarFrame.setIconImage(icon);
 
         //background
-        JLabel background = new JLabel(new ImageIcon("src/main/java/SwingApp/fondo.jpg"));
+        JLabel background = new JLabel(new ImageIcon("src/main/java/SwingApp/img/fondo.jpg"));
         mainValidarFrame.add(background);
         background.setBounds(0, 0, 598, 414);
         

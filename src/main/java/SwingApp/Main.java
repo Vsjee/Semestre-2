@@ -1,6 +1,5 @@
 package SwingApp;
 
-import java.awt.BorderLayout;
 import javax.swing.JFrame;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
@@ -12,7 +11,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JSeparator;
-import javax.swing.JTextArea;
 import javax.swing.JToolBar;
 import javax.swing.SwingUtilities;
 
@@ -36,11 +34,11 @@ public class Main {
         mainFrame.setSize(613, 414);
 
         //logo
-        Image icon = Toolkit.getDefaultToolkit().getImage("src/main/java/SwingApp/logo-Uniagustiniana-comoes.png");
+        Image icon = Toolkit.getDefaultToolkit().getImage("src/main/java/SwingApp/img/logo-Uniagustiniana-comoes.png");
         mainFrame.setIconImage(icon);
 
         //background
-        JLabel background = new JLabel(new ImageIcon("src/main/java/SwingApp/fondo.jpg"));
+        JLabel background = new JLabel(new ImageIcon("src/main/java/SwingApp/img/fondo.jpg"));
         mainFrame.add(background);
 
         //menu bar
@@ -240,8 +238,6 @@ public class Main {
         mainFrame.setResizable(false);
         mainFrame.setVisible(true);
     }
-    
-    //JToolBar----------------------
 
     public static void main(String[] args) {
 

@@ -1,4 +1,4 @@
-package SwingApp;
+package SwingApp.frame2;
 
 import javax.swing.*;
 import java.awt.Image;
@@ -14,7 +14,7 @@ public class MainInfoFrame {
     
     String saloncito, docentico;
     
-    MainInfoFrame(String titulo) {
+    public MainInfoFrame(String titulo) {
         salonesDocentes data = new salonesDocentes(titulo);
         saloncito = data.salon();
         docentico = data.docente();
@@ -23,11 +23,11 @@ public class MainInfoFrame {
         mainInfoFrame.setSize(613, 414);
 
         //logo
-        Image icon = Toolkit.getDefaultToolkit().getImage("src/main/java/SwingApp/logo-Uniagustiniana-comoes.png");
+        Image icon = Toolkit.getDefaultToolkit().getImage("src/main/java/SwingApp/img/logo-Uniagustiniana-comoes.png");
         mainInfoFrame.setIconImage(icon);
 
         //background
-        JLabel background = new JLabel(new ImageIcon("src/main/java/SwingApp/fondo.jpg"));
+        JLabel background = new JLabel(new ImageIcon("src/main/java/SwingApp/img/fondo.jpg"));
         mainInfoFrame.add(background);
         background.setBounds(0, 0, 598, 414);
         

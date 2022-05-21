@@ -1,5 +1,6 @@
 package SwingApp;
 
+import SwingApp.frame2.MainInfoFrame;
 import javax.swing.JMenuItem;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -26,6 +27,13 @@ public class NavegandoMenu implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         JMenuItem menuItem = (JMenuItem)e.getSource();
         titulo = menuItem.getText();
+        
+        recolector();
+        
+        new MainInfoFrame(titulo);
+    }
+    
+    public void recolector() {
         
         if(titulo.equals("MÉTODOS DE ESTUDIO Y NUEVAS TECNOLOGÍAS DE LA COMUNICACIÓN")) {
             semestreUno.setText("MÉTODOS");
@@ -112,7 +120,5 @@ public class NavegandoMenu implements ActionListener {
             /*
             */
         }
-        
-        new MainInfoFrame(titulo);
     }
 }

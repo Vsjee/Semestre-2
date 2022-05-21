@@ -1,4 +1,4 @@
-package SwingApp;
+package SwingApp.frame3;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

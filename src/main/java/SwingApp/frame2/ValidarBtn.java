@@ -1,5 +1,6 @@
-package SwingApp;
+package SwingApp.frame2;
 
+import SwingApp.frame3.ValidarFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
