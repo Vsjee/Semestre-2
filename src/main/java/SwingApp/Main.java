@@ -146,10 +146,7 @@ public class Main {
         Semestre6.add(S6_Materia5);
         Semestre6.add(S6_Materia6);
 
-        //herramientas
-        //JSeparator separator = new JSeparator();
-        //menu.add(separator);
-        //separator.setForeground(Color.white);
+        //Herramientas
         Herramientas = new JMenu("Herramientas");
         salir = new JMenu("Salir");
         si = new JMenuItem("Si");

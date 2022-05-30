@@ -117,8 +117,6 @@ public class NavegandoMenu implements ActionListener {
             semestreSeis.setText("ELECTIVA III");
         } else if(titulo.equals("LEGISLACIÓN TECNOLÓGICA")) {
             semestreSeis.setText("LEGISLACIÓN TIC");
-            /*
-            */
         }
     }
 }
